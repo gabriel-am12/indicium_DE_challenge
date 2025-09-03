@@ -1,2 +1,5 @@
 /venv
 /dbdata
+/dwhdata
+/airflow_db
+/logs
