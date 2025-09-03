@@ -59,6 +59,7 @@ with DAG(
                     table, con=conn, if_exists="replace", index=False
                 )
 
-    csv_ok = extract_csv()
-    sql_ok = extract_sql()
-    [csv_ok, sql_ok] >> load_dwh()
+    ds = "{{ data_interval_end | ds }}"
+    csv_ok = extract_csv(ds = ds)
+    sql_ok = extract_sql(ds = ds)
+    [csv_ok, sql_ok] >> load_dwh(ds = ds)
