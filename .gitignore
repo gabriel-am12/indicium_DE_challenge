@@ -1,2 +1,6 @@
 /venv
 /dbdata
+/dwhdata
+/airflow_db
+/logs
+/dags/__pycache__
